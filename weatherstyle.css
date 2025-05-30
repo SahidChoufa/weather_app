@@ -1,127 +1,140 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-image: url("images/bg.jpg");
-  min-height: 92vh;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  min-height: 100vh;
   overflow: auto;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   background-size: cover;
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
- 
-
 }
 
 .header h4 {
-  color: #c0fdff;
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: 600;
   font-size: 2.4rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
 }
+
 .app-main {
   min-height: 10vh;
   width: 30vw;
   margin: 50px auto;
-  padding: 20px;
+  padding: 2rem;
   text-align: center;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  border-radius: 15px;
-  /* fallback for old browsers */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.app-main > * {
-  margin-bottom: 20px;
-}
+
 .input-box {
   width: 100%;
-  background: azure;
-  color: #e4603a;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c5282;
   font-weight: 500;
   border: none;
-  font-size: 1.7rem;
-  border-radius: 10px;
-  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  padding: 1rem;
   text-align: center;
   outline: none;
-  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-box:focus {
+  transform: scale(1.02);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .weather-body {
-  color: #fff;
-  padding: 20px;
-  line-height: 2rem;
-  border-radius: 10px;
-  background-color: #eff1f3;
+  color: #ffffff;
+  padding: 1.5rem;
+  line-height: 1.6;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
   display: none;
-  background-color: transparent;
-
+  margin-top: 2rem;
 }
+
 .location-deatils {
-  font-weight: bold;
-}
-.weather-status {
-  padding: 20px;
-}
-.temp {
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 20px 0px;
-  text-shadow: 2px 4px rgba(0, 0, 0, 0.1);
-}
-.weather {
-  margin-top: 25px;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-.min-max {
+  font-weight: 600;
   font-size: 1.2rem;
-  font-weight: 400;
-  margin-top: 15px;
+  margin-bottom: 1rem;
 }
 
-.day_details {
-  padding: 20px;
+.weather-status {
+  padding: 1.5rem 0;
 }
-.sun-detail,
+
+.temp {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  text-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+  color: #4ade80;
+}
+
+.weather {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  color: #ffffff;
+}
+
+.min-max {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  color: #e2e8f0;
+}
+
+.day-details {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
 .basic {
   font-size: 1rem;
-}
-#weather-icon {
-  color: black;
+  color: #f0fdf4;
+  line-height: 1.8;
 }
 
+#updated_on {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-top: 0.5rem;
+}
 
 @media screen and (max-width: 800px) {
   .app-main {
     width: 95%;
-    padding: 10px;
+    padding: 1rem;
   }
-  body {
-    min-height: 94vh;
+  
+  .temp {
+    font-size: 3rem;
   }
-}
-.searchInputBox{
-  opacity: 0.5;
+  
+  .weather {
+    font-size: 1.5rem;
+  }
 }
